@@ -22,6 +22,8 @@ import {NzNotificationService} from "ng-zorro-antd/notification";
 import { PagesComponent } from './pages.component';
 import {NzDropDownModule} from "ng-zorro-antd/dropdown";
 import {NzLayoutModule} from "ng-zorro-antd/layout";
+import {NzStepsModule} from "ng-zorro-antd/steps";
+import {NzProgressModule} from "ng-zorro-antd/progress";
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import {NzLayoutModule} from "ng-zorro-antd/layout";
     NzIconModule,
     NzSelectModule,
     NzDropDownModule,
-    NzLayoutModule
+    NzLayoutModule,
+    NzStepsModule,
+    NzProgressModule
   ],
   providers: [
     NzNotificationService
