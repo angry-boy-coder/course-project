@@ -8,20 +8,52 @@ import { RegisterComponent } from './register/register.component';
 import { TestComponent } from './test/test.component';
 import { CourseListComponent } from './course/course-list/course-list.component';
 import { CourseViewComponent } from './course/course-view/course-view.component';
+import {NzFormModule} from "ng-zorro-antd/form";
+import {NzInputModule} from "ng-zorro-antd/input";
+import {ReactiveFormsModule} from "@angular/forms";
+import {NzCheckboxModule} from "ng-zorro-antd/checkbox";
+import {NzButtonModule} from "ng-zorro-antd/button";
+import { UserPagesComponent } from './user-pages/user-pages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {NzToolTipModule} from "ng-zorro-antd/tooltip";
+import {NzIconModule} from "ng-zorro-antd/icon";
+import {NzSelectModule} from "ng-zorro-antd/select";
+import {NzNotificationService} from "ng-zorro-antd/notification";
+import { PagesComponent } from './pages.component';
+import {NzDropDownModule} from "ng-zorro-antd/dropdown";
+import {NzLayoutModule} from "ng-zorro-antd/layout";
 
 
 @NgModule({
-  imports: [PagesRoutingModule],
+  imports: [
+    PagesRoutingModule,
+    NzFormModule,
+    NzInputModule,
+    ReactiveFormsModule,
+    NzCheckboxModule,
+    NzButtonModule,
+    NzToolTipModule,
+    NzIconModule,
+    NzSelectModule,
+    NzDropDownModule,
+    NzLayoutModule
+  ],
+  providers: [
+    NzNotificationService
+  ],
   declarations: [
     WelcomeComponent,
     LoginComponent,
     RegisterComponent,
     TestComponent,
     CourseListComponent,
-    CourseViewComponent
+    CourseViewComponent,
+    UserPagesComponent,
+    DashboardComponent,
+    PagesComponent
   ],
   exports: [
-    WelcomeComponent
+    PagesComponent
   ]
 })
 export class PagesModule { }

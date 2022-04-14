@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NzFormModule} from "ng-zorro-antd/form";
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isCollapsed = false;
-
-  route() {
-
-  }
 }

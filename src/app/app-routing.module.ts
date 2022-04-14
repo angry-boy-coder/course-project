@@ -4,7 +4,7 @@ import {RegisterComponent} from "./pages/register/register.component";
 import {LoginComponent} from "./pages/login/login.component";
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/api/project' },
+  { path: '', pathMatch: 'full', redirectTo: 'register' },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'api/project', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) }

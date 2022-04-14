@@ -1,0 +1,80 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar"
+            nzCollapsible
+            nzWidth="256px"
+            nzBreakpoint="md"
+            [(nzCollapsed)]="isCollapsed"
+            [nzTrigger]="null">
+    <div class="sidebar-logo">
+      <a href="https://ng.ant.design/" target="_blank">
+        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+        <h1>Online Course Project</h1>
+      </a>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-menu-item
+          nz-tooltip=""
+          nzTooltipPlacement="right"
+          routerLink="/api/project"
+      >
+        <i nz-icon nzType="dashboard"></i>
+        <span>Welcome</span>
+      </li>
+      <li nz-menu-item
+          nz-tooltip=""
+          nzTooltipPlacement="right"
+          routerLink="/api/project/dashboard"
+      >
+        <i nz-icon nzType="dashboard"></i>
+        <span>Dashboard</span>
+      </li>
+      <li nz-submenu nzTitle="Course" nzIcon="desktop">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/api/project/course/list">Course List</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/api/project/course/test">Test</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzOpen nzTitle="Form" nzIcon="user">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/api/project/user/page">User Page</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/login">Login Page</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/register">Register Page</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger"
+               nz-icon
+               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></i>
+        </span>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
+<nz-dropdown-menu #menu>
+  <ul nz-menu nzSelectable>
+    <li nz-menu-item>1st menu item</li>
+    <li nz-menu-item>2nd menu item</li>
+    <li nz-menu-item>3rd menu item</li>
+  </ul>
+</nz-dropdown-menu>
