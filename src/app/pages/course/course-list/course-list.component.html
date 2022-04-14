@@ -1,1 +1,21 @@
-<p>course-list works!</p>
+<div style="padding:20px;">
+  <div nz-row [nzGutter]="6">
+    <div nz-col [nzSpan]="6" *ngFor="let course of courses;">
+      <nz-card
+        [ngStyle]="{'margin' : '10px'}"
+        [nzBordered]="true"
+        style="box-shadow: 3px 3px 3px 3px #00152955"
+        [nzCover]="coverTemplate"
+        (click)="toView(course)"
+      >
+        <nz-card-meta nzTitle="Card title" [nzDescription]="'This is the description'" [nzAvatar]="avatarTemplate"></nz-card-meta>
+      </nz-card>
+      <ng-template #avatarTemplate>
+        <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+      </ng-template>
+      <ng-template #coverTemplate>
+        <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
+      </ng-template>
+    </div>
+  </div>
+</div>

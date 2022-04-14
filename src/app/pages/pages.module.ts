@@ -24,10 +24,14 @@ import {NzDropDownModule} from "ng-zorro-antd/dropdown";
 import {NzLayoutModule} from "ng-zorro-antd/layout";
 import {NzStepsModule} from "ng-zorro-antd/steps";
 import {NzProgressModule} from "ng-zorro-antd/progress";
+import {NzCardModule} from "ng-zorro-antd/card";
+import {CommonModule} from "@angular/common";
+import {NzAvatarModule} from "ng-zorro-antd/avatar";
 
 
 @NgModule({
   imports: [
+    CommonModule,
     PagesRoutingModule,
     NzFormModule,
     NzInputModule,
@@ -40,7 +44,9 @@ import {NzProgressModule} from "ng-zorro-antd/progress";
     NzDropDownModule,
     NzLayoutModule,
     NzStepsModule,
-    NzProgressModule
+    NzProgressModule,
+    NzCardModule,
+    NzAvatarModule
   ],
   providers: [
     NzNotificationService
