@@ -27,6 +27,8 @@ import {NzProgressModule} from "ng-zorro-antd/progress";
 import {NzCardModule} from "ng-zorro-antd/card";
 import {CommonModule} from "@angular/common";
 import {NzAvatarModule} from "ng-zorro-antd/avatar";
+import {NzCarouselModule} from "ng-zorro-antd/carousel";
+import {NzTabsModule} from "ng-zorro-antd/tabs";
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import {NzAvatarModule} from "ng-zorro-antd/avatar";
     NzStepsModule,
     NzProgressModule,
     NzCardModule,
-    NzAvatarModule
+    NzAvatarModule,
+    NzCarouselModule,
+    NzTabsModule
   ],
   providers: [
     NzNotificationService

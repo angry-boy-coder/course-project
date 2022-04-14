@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  array = ['Here can be your advertising', 'Here can be your advertising', 'Here can be your advertising', 'Here can be your advertising'];
+  tabs = ['News feed', 'Statistics'];
 
   constructor() { }
 
